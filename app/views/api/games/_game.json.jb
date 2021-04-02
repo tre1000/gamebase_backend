@@ -1,0 +1,12 @@
+{
+  id: game.id,
+  title: game.title,
+  box_art: game.box_art,
+  about: game.about,
+  platforms: game.platforms,
+  multiplayer: game.multiplayer,
+  esrb_rating: game.esrb_rating,
+  content_description: game.content_description,
+  developer: game.developer,
+  publisher: game.publisher,
+}
