@@ -1,0 +1,9 @@
+{
+  user_id: user_game.user_id,
+  game_id: user_game.game_id,
+  status: user_game.status,
+  completion_time: user_game.completion_time,
+  rating: user_game.rating,
+  review: user_game.review,
+  game_info: user_game.game_info,
+}

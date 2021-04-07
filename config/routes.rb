@@ -8,9 +8,13 @@ Rails.application.routes.draw do
     get "/games" => "games#index"
     get "/games/:id" => "games#show"
     #----------user routes----------#
-    get "/users" => "users#show"
     post "/users" => "users#create"
+    get "/users/:id" => "users#show"
     patch "/users/:id" => "users#update"
     delete "/users/:id" => "users#destroy"
+    #----------session routes----------#
+    post "/sessions" => "sessions#create"
+    #----------user_games routes----------#
+    get "/user_games/:id" => "user_games#show"
   end
 end
