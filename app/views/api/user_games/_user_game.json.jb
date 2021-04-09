@@ -1,8 +1,10 @@
 {
+  id: user_game.id,
   user_id: user_game.user_id,
   game_id: user_game.game_id,
   status: user_game.status,
-  completion_time: user_game.completion_time,
+  completion_hours: user_game.completion_hours,
+  completion_minutes: user_game.completion_minutes,
   rating: user_game.rating,
   review: user_game.review,
   game_info: user_game.game_info,
