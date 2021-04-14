@@ -9,4 +9,6 @@
   content_description: game.content_description,
   developer: game.developer,
   publisher: game.publisher,
+  avg_user_rating: game.user_games.average(:rating),
+  avg_completion_time: game.avg_completion_time,
 }
