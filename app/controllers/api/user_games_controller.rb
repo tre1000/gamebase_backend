@@ -1,11 +1,16 @@
 class Api::UserGamesController < ApplicationController
-  before_action :authenticate_user, except: :show
+  before_action :authenticate_user, except: [:index, :show]
 
-  def show
-    @user_game = UserGame.find(params[:id])
-    # @game = Game.find(@user_game[:game_id])
-    render "show.json.jb"
+  def index
+    @user_games = UserGame.where("user_id = #{params[:id]}")
+    render "index.json.jb"
   end
+
+  # def show
+  #   @user_game = UserGame.find(params[:id])
+  #   # @game = Game.find(@user_game[:game_id])
+  #   render "show.json.jb"
+  # end
 
   def create
     @user_game = UserGame.new({

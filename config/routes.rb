@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     #----------session routes----------#
     post "/sessions" => "sessions#create"
     #----------user_games routes----------#
-    get "/user_games/:id" => "user_games#show"
+    get "/user_games/:id" => "user_games#index"
     post "/user_games" => "user_games#create"
     patch "/user_games/:id" => "user_games#update"
   end
