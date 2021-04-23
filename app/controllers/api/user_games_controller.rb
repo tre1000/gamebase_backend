@@ -21,12 +21,13 @@ class Api::UserGamesController < ApplicationController
       completion_minutes: params[:completion_minutes],
       rating: params[:rating],
       review: params[:review],
+      instance: params[:instance],
     })
 
     if @user_game.save
       render json: { message: "Game successfully added to list" }, status: 200
     else
-      render json: { errors: user_game.errors.full_messages }, status: 400
+      render json: { errors: @user_game.errors.full_messages }, status: 400
     end
   end
 

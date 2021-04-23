@@ -8,4 +8,5 @@
   rating: user_game.rating,
   review: user_game.review,
   game_info: user_game.game_info,
+  instance_tuple: user_game.instance,
 }

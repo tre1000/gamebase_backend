@@ -4,7 +4,7 @@ class Game < ApplicationRecord
 
   def avg_completion_time
     #searches for user_games instances where the status is completed and the game_id is equal to the id of the current instance of game.
-    user_games = UserGame.where("game_id = ? AND status ILIKE ?", "#{id}", "completed")
+    user_games = UserGame.where("game_id = ? AND status ILIKE ? AND completion_hours > ?", "#{id}", "completed", "0")
     #this breaks the total completion time for each game into minutes and adds it to total_time_in_minutes
 
     # this ensures that the method doesn't run if no one has the game on their list
