@@ -1,8 +1,13 @@
 class Api::UserGamesController < ApplicationController
-  before_action :authenticate_user, except: [:index, :show]
+  before_action :authenticate_user, except: [:index, :show, :reviews]
 
   def index
     @user_games = UserGame.where("user_id = #{params[:id]}")
+    render "index.json.jb"
+  end
+
+  def reviews
+    @user_games = UserGame.where("game_id = ? AND review != ? AND length(review) > ?", "#{params[:id]}", "null", "2")
     render "index.json.jb"
   end
 
